@@ -53,10 +53,23 @@
              with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward. What do you expect to
              see, and why?*/
 
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);
-            // I expect to see 20.5 because variable prices (double[]) is reference type so it passed it to method parameter as reference to original value so method access the original array and subtracts 5 from its first element
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine(prices[0]);
+            //// I expect to see 20.5 because variable prices (double[]) is reference type so it passed it to method parameter as reference to original value so method access the original array and subtracts 5 from its first element
+
+            #endregion
+
+            #region Question 7
+            /*Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            Call it and print pages afterward. How is the result different from question 5?
+            */
+
+            int pages = 400;
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages);
+            // The result is different from question 5 is here passed variable pages as reference type,
+            // so method access the original variable and adds 50 to its value
 
             #endregion
         }
@@ -88,6 +101,13 @@
         static void ApplyDiscount(double[] prices)
         {
             prices[0] -= 5;
+        }
+        #endregion
+
+        #region method of Question 7
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
         }
         #endregion
 
