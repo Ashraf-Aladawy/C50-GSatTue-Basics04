@@ -35,7 +35,17 @@
             /*Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
             "Clean Code".*/
 
-            PrintBookTitle("Clean Code");
+            //PrintBookTitle("Clean Code");
+            #endregion
+
+            #region Question 5
+            /*Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            int pages = 400; and print pages afterward. What do you expect to see, and why?*/
+
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
+            // I expect to see 400 because variable pages (int) is value type so it passed it to method parameter as copy of value not refrence to original value
             #endregion
         }
 
@@ -52,6 +62,13 @@
         static void PrintBookTitle(string title)
         {
             Console.WriteLine("Book title: "+title);
+        }
+        #endregion
+
+        #region method of Question 5
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
         }
         #endregion
 
