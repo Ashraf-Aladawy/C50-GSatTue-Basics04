@@ -78,10 +78,22 @@
             new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
            afterward.*/
 
-            double[] prices = { 10,20,30,40,50.5,60 };
-            ReplaceArray(ref prices);
-            Console.WriteLine(prices.Length);
+            //double[] prices = { 10,20,30,40,50.5,60 };
+            //ReplaceArray(ref prices);
+            //Console.WriteLine(prices.Length);
 
+            #endregion
+
+            #region Question 9
+            /*Write a method bool TryGetPrice(string title, out double price) that returns true and sets
+            price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it
+            and print the price if found*/
+
+            bool isFound = TryGetPrice("Clean Code", out double price);
+            if (isFound)
+            {
+                Console.WriteLine(price);
+            }
             #endregion
         }
 
@@ -97,7 +109,7 @@
         #region method of Question 4
         static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Book title: "+title);
+            Console.WriteLine("Book title: " + title);
         }
         #endregion
 
@@ -129,7 +141,23 @@
         }
         #endregion
 
+        #region method of Question 9
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
 
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+
+        }
+        #endregion
     }
 }
 
