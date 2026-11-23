@@ -42,10 +42,22 @@
             /*Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
             int pages = 400; and print pages afterward. What do you expect to see, and why?*/
 
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
-            // I expect to see 400 because variable pages (int) is value type so it passed it to method parameter as copy of value not refrence to original value
+            //int pages = 400;
+            //AddBonusPages(pages);
+            //Console.WriteLine(pages);
+            //// I expect to see 400 because variable pages (int) is value type so it passed it to method parameter as copy of value not refrence to original value
+            #endregion
+
+            #region Question 6
+            /*Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+             with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward. What do you expect to
+             see, and why?*/
+
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
+            // I expect to see 20.5 because variable prices (double[]) is reference type so it passed it to method parameter as reference to original value so method access the original array and subtracts 5 from its first element
+
             #endregion
         }
 
@@ -69,6 +81,13 @@
         static void AddBonusPages(int pages)
         {
             pages += 50;
+        }
+        #endregion
+
+        #region method of Question 6
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
         }
         #endregion
 
