@@ -89,11 +89,20 @@
             price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it
             and print the price if found*/
 
-            bool isFound = TryGetPrice("Clean Code", out double price);
-            if (isFound)
-            {
-                Console.WriteLine(price);
-            }
+            //bool isFound = TryGetPrice("Clean Code", out double price);
+            //if (isFound)
+            //{
+            //    Console.WriteLine(price);
+            //}
+            #endregion
+
+            #region Question 10
+            /*Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call
+            it once with only a title, and once passing both a title and pages.*/
+
+            PrintBookInfo("Clean Code");
+            Console.WriteLine("=======================================");
+            PrintBookInfo("C#", 500);
             #endregion
         }
 
@@ -158,6 +167,16 @@
 
         }
         #endregion
+
+        #region method of Question 10
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Book title: {title}");
+            Console.WriteLine($"Pages: {pages}");
+        }
+        #endregion
+
+ 
     }
 }
 
