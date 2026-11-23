@@ -109,7 +109,14 @@
             /*Using the PrintBookInfo method from the question above, call it by naming the
             parameters, passing pages before title.*/
 
-            PrintBookInfo(pages: 500, title: "C++");
+            //PrintBookInfo(pages: 500, title: "C++");
+            #endregion
+
+            #region Question 12
+            /*Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+             Call it with three book titles.*/
+
+            PrintAllTitles("Clean Code", "C#", "C++");
             #endregion
         }
 
@@ -183,7 +190,18 @@
         }
         #endregion
 
- 
+        #region method of Question 12
+        static void PrintAllTitles(params string[] titles)
+
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+        #endregion
+
+
     }
 }
 
