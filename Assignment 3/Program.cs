@@ -28,14 +28,30 @@
             /*Write a method called PrintWelcomeMessage that takes no parameters and prints
               "Welcome to the Library!". Call it from Main*/
 
-             PrintWelcomeMessage();
+            //PrintWelcomeMessage();
+            #endregion
+
+            #region Question 4
+            /*Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+            "Clean Code".*/
+
+            PrintBookTitle("Clean Code");
             #endregion
         }
+
+
 
         #region method of Question 3
         static void PrintWelcomeMessage()
         {
             Console.WriteLine("Welcome to the Library!");
+        }
+        #endregion
+
+        #region method of Question 4
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine("Book title: "+title);
         }
         #endregion
 
