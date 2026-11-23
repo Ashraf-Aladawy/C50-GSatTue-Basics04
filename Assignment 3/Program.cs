@@ -65,11 +65,22 @@
             Call it and print pages afterward. How is the result different from question 5?
             */
 
-            int pages = 400;
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages);
-            // The result is different from question 5 is here passed variable pages as reference type,
-            // so method access the original variable and adds 50 to its value
+            //int pages = 400;
+            //AddBonusPagesByRef(ref pages);
+            //Console.WriteLine(pages);
+            //// The result is different from question 5 is here passed variable pages as reference type,
+            //// so method access the original variable and adds 50 to its value
+
+            #endregion
+
+            #region Question 8
+            /*Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
+           afterward.*/
+
+            double[] prices = { 10,20,30,40,50.5,60 };
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
 
             #endregion
         }
@@ -108,6 +119,13 @@
         static void AddBonusPagesByRef(ref int pages)
         {
             pages += 50;
+        }
+        #endregion
+
+        #region method of Question 8
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
         #endregion
 
